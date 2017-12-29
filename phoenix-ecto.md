@@ -40,7 +40,8 @@ defmodule Myapp.Accounts.User do
     field :name
     field :age, :integer
     field :password, virtual: true
-
+    has_many :convo_likes, Whatsay.ConvoLike
+    has_many :suggestions, Whatsay.Suggestion
     timestamps()
   end
 end
