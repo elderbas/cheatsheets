@@ -20,6 +20,16 @@ $ mix phx.gen.html \
     age:integer
 ```
 
+```bash
+$ mix phoenix.gen.json \
+    Video \ # schema - VideoController, VideoView, VideoModel
+    videos \ # route and table name
+    user_id:references:users \
+    url:string \
+    title:string \
+    description:text
+```
+
 ### Schema
 
 ```elixir
