@@ -55,6 +55,13 @@ create_if_not_exists table(:documents) do: ... end
 ```
 
 ### Other operations
+Just adding a unique constraint to some columns
+```elixir
+  def change do
+    create unique_index(:class_books, [:class_id, :book_id], name: :one_classbook)
+  end
+```
+
 
 ```elixir
 alter table(:posts) do
