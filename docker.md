@@ -1,8 +1,74 @@
 ---
 title: Docker CLI
 category: Devops
-layout: 2017/sheet
+layout: 2018/sheet
 ---
+
+## `docker container`
+
+### `ls -a`
+
+See all containers (including stopped ones). Only use `ls` if you only want to see active containers
+
+-----
+
+### `run`
+
+`docker container run --publish 80:80 --detach nginx`
+
+all traffic directed to the host's port (left) 80 is directed to the container's port 80 (right)
+
+-----
+
+#### `run -it`
+
+open an interactive shell prompt into a container.
+
+`-t` gives us the access into the container
+`-i` keeps it open
+
+-----
+
+#### `rm`
+
+`docker container rm -f $(docker container ls -aq)`
+
+remove all containers, including dead ones
+
+-----
+
+#### `start`
+
+Usage:	docker container start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# OLD
+
 
 Manage images
 -------------
